@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Alex Araiza</title>
+    <link rel="preload" as="font" href="./fonts/RosaSans-Light.woff" type="font/woff">
+    <link rel="preload" as="font" href="./fonts/RobotoMono-normal.woff2" type="font/woff2">
+    <style>body { visibility: hidden; opacity: 0; }</style>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <script>document.body.style.visibility = "hidden";document.body.style.opacity = 0;</script>
+
+    <header>
+      <nav>
+        <a href="#projects" class="nav__link">projects</a>
+        <a href="#contact" class="nav__link">contact</a>
+        <a href="resume.pdf" class="nav__link">resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div id="name">Alex Araiza</div>
+        <div id="profession">software developer</div>
+        <a href="#projects" class="btn my-projects-btn" id="myProjectsButton">my projects
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
+        </a>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+
+          <div class="card" id="price-tracker">
+            <div class="card-background"></div>
+
+            <div class="card-body">
+              <span class="card-title">Price tracker</span>
+              <div class="card-text">
+                <p>A web app to track the price of online items.</p>
+                <p>Add the URL of any item, and price tracker will let you know when it goes below a certain price.</p>
+                <p>Demo credentials:<br>user@demo.com | demo</p>
+              </div>
+              <div class="btn-group">
+                <a href="https://github.com/alexaraiza/price-tracker" class="btn code-btn">code</a>
+                <a href="http://www.pricetracker.ml" class="btn demo-btn">demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card reverse" id="infection-simulator">
+            <div class="card-background"></div>
+
+            <div class="card-body">
+              <span class="card-title">Infection simulator</span>
+              <div class="card-text">
+                <p>An app to simulate the spread of an infectious disease.</p>
+                <p>Put people in an enclosed space, build walls between them and watch the disease spread. Change the infection and death rates to see what happens.</p>
+              </div>
+              <div class="btn-group">
+                <a href="https://github.com/alexaraiza/infection-simulator" class="btn code-btn">code</a>
+                <a href="https://alexaraiza.github.io/infection-simulator" class="btn demo-btn">demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="fipsy-fpga-programmer">
+            <div class="card-background"></div>
+
+            <div class="card-body">
+              <span class="card-title">Fipsy FPGA programmer</span>
+              <div class="card-text">
+                <p>A browser-based tool to program an FPGA via Wi-Fi.</p>
+              </div>
+              <div class="btn-group">
+                <a href="https://github.com/alexaraiza/fipsy-fpga-programmer" class="btn code-btn">code</a>
+                <a href="https://upcommons.upc.edu/handle/2117/334201" class="btn thesis-btn">thesis</a>
+                <a href="https://drive.google.com/file/d/18pnA9VaaefFUToI4FuoPUdOy90CklE5c/view" class="btn video-btn">video</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section__title">Contact</div>
+        <div class="container">
+
+          <div class="copy-text">
+            <div class="email">
+              <a href="mailto:alexandre.araiza@gmail.com" class="contact-link"></a>
+              <input disabled type="text" class="contact-info" value="alexandre.araiza@gmail.com" id="email">
+            </div>
+            <button class="copy-button" id="copyEmailButton">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H2v16h2V3h12V1zm5 4H6v18h15V5zm-2 16H8V7h11v14z"/></svg>
+            </button>
+          </div>
+
+          <div class="copy-text">
+            <div class="email">
+              <input disabled type="text" class="contact-info" value="+34 672 62 38 77" id="phoneNumber">
+            </div>
+            <button class="copy-button" id="copyPhoneNumberButton">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H2v16h2V3h12V1zm5 4H6v18h15V5zm-2 16H8V7h11v14z"/></svg>
+            </button>
+          </div>
+
+          <div class="copy-text">
+            <div class="email">
+              <a href="https://www.linkedin.com/in/alexaraiza/" class="contact-link"></a>
+              <input disabled type="text" class="contact-info" value="linkedin.com/in/alexaraiza" id="linkedin">
+            </div>
+            <button class="copy-button" id="copyLinkedInButton">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H2v16h2V3h12V1zm5 4H6v18h15V5zm-2 16H8V7h11v14z"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer>
+
+      <a href="https://github.com/alexaraiza">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.439 43.439" fill="#1b1817" class="logo-icon">
+          <path d="M21.717 0c-11.992 0-21.717 9.724-21.717 21.72c0 9.594 6.223 17.736 14.853 20.609c1.087.199 1.483-.472 1.483-1.048c0-.516-.019-1.881-.03-3.693c-6.04 1.312-7.315-2.912-7.315-2.912c-.988-2.51-2.412-3.178-2.412-3.178c-1.972-1.346.149-1.32.149-1.32c2.18.154 3.327 2.239 3.327 2.239c1.937 3.319 5.084 2.36 6.321 1.804c.197-1.403.759-2.36 1.379-2.903c-4.823-.549-9.894-2.412-9.894-10.734c0-2.372.847-4.31 2.236-5.828c-.224-.55-.969-2.758.214-5.748c0 0 1.822-.584 5.972 2.225c1.732-.481 3.59-.721 5.437-.73c1.845.009 3.703.249 5.437.73c4.147-2.81 5.967-2.225 5.967-2.225c1.185 2.99.44 5.198.217 5.748c1.392 1.518 2.232 3.456 2.232 5.828c0 8.344-5.078 10.18-9.916 10.717c.779.67 1.474 1.996 1.474 4.023c0 2.902-.027 5.245-.027 5.957c0 .581.392 1.257 1.493 1.045c8.624-2.878 14.842-11.013 14.842-20.606c0-11.996-9.726-21.72-21.722-21.72"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/alexaraiza/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.790 64.790" fill="#0a66c2" class="logo-icon">
+          <path d="M55.204 55.204h-9.6V40.17c0-3.585-.064-8.2-4.993-8.2c-5 0-5.765 3.906-5.765 7.939v15.294h-9.6V24.287h9.216v4.225h.129a10.1 10.1 0 019.093-4.994c9.73 0 11.524 6.4 11.524 14.726ZM14.414 20.061a5.571 5.571 0 115.57-5.572a5.571 5.571 0 01-5.57 5.572m4.8 35.143h-9.61V24.287h9.61Zm40.776-55.2h-55.21a4.728 4.728 0 00-4.781 4.67v55.439a4.731 4.731 0 004.781 4.675h55.21a4.741 4.741 0 004.8-4.675V4.67a4.738 4.738 0 00-4.8-4.67"/>
+        </svg>
+      </a>
+
+    </footer>
+  </body>
+  <script src="main.js" type="text/javascript"></script>
+</html>
