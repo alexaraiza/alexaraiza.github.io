@@ -2,6 +2,7 @@ window.addEventListener("load", loadPage);
 copyEmailButton.addEventListener("click", copyEmail);
 copyPhoneNumberButton.addEventListener("click", copyPhoneNumber);
 copyLinkedInButton.addEventListener("click", copyLinkedIn);
+contactForm.addEventListener("submit", submitContactForm);
 
 
 function loadPage() {
@@ -60,7 +61,7 @@ function typeOut(text, element) {
 
 if (window.matchMedia("(hover: none)").matches && window.innerWidth < 736) {
   let options = {
-    rootMargin: '-12% 0px',
+    rootMargin: "-12% 0px",
     threshold: 1
   };
 
@@ -82,4 +83,44 @@ function hoverCard(entries) {
     entries[0].target.children[0].style.opacity = "";
     entries[0].target.children[1].style.opacity = "";
   }
+}
+
+
+function submitContactForm(event) {
+  contactFormSubmitButton.disabled = true;
+  formFeedback.innerHTML = "";
+  event.preventDefault();
+
+  const contactFormData = {
+    name: contactFormName.value,
+    email: contactFormEmail.value,
+    message: contactFormMessage.value
+  };
+
+  fetch("https://alexaraiza-contact-default-rtdb.firebaseio.com/contact.json",
+  {
+    method: "POST",
+    body: JSON.stringify(contactFormData),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then((response) => {
+    if (response.ok) {
+      contactForm.reset();
+      formFeedback.setAttribute("class", "success");
+      formFeedback.innerHTML = "Thank you for your message!";
+    }
+    else {
+      formFeedback.setAttribute("class", "error");
+      formFeedback.innerHTML = "Something went wrong. Please try again.";
+    }
+  })
+  .catch(() => {
+    formFeedback.setAttribute("class", "error");
+    formFeedback.innerHTML = "Something went wrong. Please check your network connection and try again.";
+  })
+  .finally(() => {
+    contactFormSubmitButton.disabled = false;
+  });
 }
