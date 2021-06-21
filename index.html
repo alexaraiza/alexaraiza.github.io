@@ -88,6 +88,27 @@
       <section id="contact">
         <div class="section__title">Contact</div>
         <div class="container">
+          <p>If you want to collaborate with me or ask me anything, send me a message! I'll get back to you as soon as possible.</p>
+
+          <form id="contactForm">
+            <div>
+              <label for="contactFormName">Name</label>
+              <input type="text" name="name" id="contactFormName" required />
+            </div>
+            <div>
+              <label for="contactFormEmail">Email</label>
+              <input type="email" name="email" id="contactFormEmail" required />
+            </div>
+            <div>
+              <label for="contactFormMessage">Message</label>
+              <textarea name="message" id="contactFormMessage" required></textarea>
+            </div>
+            <button type="submit" class="btn" id="contactFormSubmitButton">send</button>
+
+            <div id="formFeedback"></div>
+          </form>
+
+          <p>If you prefer, you can also contact me via email, phone or LinkedIn.</p>
 
           <div class="copy-text">
             <div class="email">
