@@ -140,6 +140,7 @@ a, .btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1rem 0;
     position: relative;
     height: calc(12rem + 50vw);
     width: 100%;
@@ -187,6 +188,10 @@ a, .btn {
 
 #price-tracker .card-background {
     background: url("img/pricetracker_square.svg") center center/cover;
+}
+
+#sopars-de-duro .card-background {
+    background: url("img/soparsdeduro.png") no-repeat center/contain;
 }
 
 #infection-simulator .card-background {
