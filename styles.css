@@ -80,7 +80,7 @@ section {
 }
 
 #name {
-    font-size: calc(0.4rem + 9vw);
+    font-size: calc(0.5rem + 10vw);
 }
 
 #profession {
@@ -361,6 +361,13 @@ footer a:hover {
     width: 100%;
 }
 
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: -9;
+}
+
 
 @media screen and (min-width: 736px) {
     body {
@@ -380,8 +387,12 @@ footer a:hover {
         width: calc(8rem + 50vw);
     }
 
+    #hero > .container {
+        align-items: flex-start;
+    }
+
     #name {
-        font-size: 4rem;
+        font-size: 6rem;
     }
     
     #profession {

@@ -23,11 +23,13 @@
 
     <main>
       <section id="hero">
-        <div id="name">Alex Araiza</div>
-        <div id="profession">software developer</div>
-        <a href="#projects" class="btn my-projects-btn" id="myProjectsButton">my projects
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
-        </a>
+        <div class="container">
+          <div id="name">Alex Araiza</div>
+          <div id="profession">software developer</div>
+          <a href="#projects" class="btn my-projects-btn" id="myProjectsButton">my projects
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
+          </a>
+        </div>
       </section>
 
       <section id="projects">
@@ -174,6 +176,10 @@
       </a>
 
     </footer>
+
+    <canvas id="backgroundCanvas"></canvas>
   </body>
   <script src="main.js" type="text/javascript"></script>
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <script type="module" src="background.js"></script>
 </html>
