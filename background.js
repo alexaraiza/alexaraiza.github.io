@@ -1,3 +1,6 @@
+import { FBXLoader } from "https://threejs.org/examples/jsm/loaders/FBXLoader.js";
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 10, 100000);
 
@@ -30,11 +33,11 @@ window.addEventListener("scroll", setCameraPosition);
 
 
 const ambientLight = new THREE.AmbientLight(0xbfbfbf);
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
+const pointLight = new THREE.PointLight(0xffffff, 0.3, 0, 2);
 
 const textureLoader = new THREE.TextureLoader();
 
-const earthGeometry = new THREE.SphereGeometry(300, 64, 64);
+const earthGeometry = new THREE.SphereGeometry(200, 64, 64);
 const earthTexture = textureLoader.load("./img/earth.png");
 const earthOpacityTexture = textureLoader.load("./img/earth_opacity.png");
 const earthMaterial = new THREE.MeshPhongMaterial({
@@ -108,7 +111,18 @@ group.add(earth);
 
 
 setCameraPosition();
-scene.add(ambientLight, directionalLight, stars, group);
+scene.add(ambientLight, pointLight, stars, group);
+
+
+const loader = new FBXLoader();
+
+loader.load("./models/ISS.fbx", ISS => {
+  ISS.scale.set(50, 50, 50);
+  ISS.position.x = 200;
+  ISS.position.y = -2100;
+  ISS.rotation.z = Math.PI / 12;
+  scene.add(ISS);
+});
 
 
 fetch("https://ipapi.co/latlong/")
@@ -135,15 +149,16 @@ function animate() {
 
 
 function setCameraPosition() {
+  const SCROLL_RATIO = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
   if (window.innerWidth < 736) {
     camera.position.x = 0;
   }
   else {
-    camera.position.x = Math.max(- window.innerWidth / 4, -400);
+    camera.position.x = Math.max(- 80 - 160 * camera.aspect, -420);
   }
-  camera.position.y = Math.max(400 - window.innerWidth / 4, 0) - window.pageYOffset;
-  camera.position.z = Math.max(3200 - window.innerWidth, 1800);
-  directionalLight.position.set(camera.position.x, camera.position.y, camera.position.z);
+  camera.position.y = Math.max(450 - 210 * camera.aspect, 0) - (2700 - 240 * camera.aspect) * SCROLL_RATIO;
+  camera.position.z = Math.max(3600 - 900 * camera.aspect, 2100);
+  pointLight.position.set(camera.position.x, camera.position.y, camera.position.z);
 }
 
 function getStarSize() {
