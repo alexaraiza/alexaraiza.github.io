@@ -59,33 +59,6 @@ function typeOut(text, element) {
 }
 
 
-if (window.matchMedia("(hover: none)").matches && window.innerWidth < 736) {
-  let options = {
-    rootMargin: "-12% 0px",
-    threshold: 1
-  };
-
-  let cardObserver = new IntersectionObserver(hoverCard, options);
-
-  for (let card of document.getElementsByClassName("card")) {
-    cardObserver.observe(card);
-  }
-}
-
-
-function hoverCard(entries) {
-  if (entries[0].isIntersecting) {
-    entries[0].target.children[0].style.opacity = 0.05;
-    entries[0].target.children[1].style.opacity = 1;
-  }
-
-  else {
-    entries[0].target.children[0].style.opacity = "";
-    entries[0].target.children[1].style.opacity = "";
-  }
-}
-
-
 function submitContactForm(event) {
   contactFormSubmitButton.disabled = true;
   formFeedback.innerHTML = "";
