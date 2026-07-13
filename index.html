@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -7,36 +7,39 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <script>
       document.body.style.opacity = 0;
     </script>
-    <header>
-      <nav>
-        <a href="#about-me">about me</a>
-        <a href="#my-work">my work</a>
-        <a href="resume.pdf">resume</a>
-      </nav>
-    </header>
 
     <main>
       <section id="hero">
-        <div class="hero-text">
-          <div>Hello! My name is</div>
+        <div id="hello">Hello!</div>
+        <div id="i-am">
+          I'm
           <h1>Alex Araiza</h1>
-          <div>I'm a software developer</div>
         </div>
-        <div class="button-group">
-          <a class="button secondary" href="#about-me">who am I?</a>
-          <a class="button primary" href="#my-work">what have I done?</a>
-        </div>
+        <div id="software-developer">Software developer</div>
       </section>
 
+      <header>
+        <nav>
+          <a href="#about-me">About me</a>
+          <a href="#my-work">My work</a>
+          <a href="#contact">Contact</a>
+          <a href="resume.pdf">Resume</a>
+        </nav>
+      </header>
+
       <section id="about-me">
-        <h1>Who am I?</h1>
+        <h1>About me</h1>
+
         <p>
           Hello! I'm Alex, a software developer. I've always been interested in science and technology; as a kid, I
           loved getting my hands on anything that caught my interest and taking it apart to see how it worked. As an
@@ -44,101 +47,176 @@
           fell in love with how easy (and cheap!) it was to make and test my own ideas.
         </p>
         <p>
-          Over the years I've used my skills to develop a chat system for
-          <a href="https://linehayat.usm.my/">LineHayat</a>, a student-run organization; improve the customer experience
-          at <a href="https://www.kombo.co/">Kombo</a>, a startup in the transportation industry; and turn other
-          projects into digital reality. Most recently I've been developing
-          <a href="https://eventual.li">eventual.li</a>, a web app to find events, aimed at people looking for things to
-          do in their area.
+          Over the years I've used my skills to develop workplace tools at <a href="https://bxyz.ai/">BXYZ</a>; improve
+          the customer experience at <a href="https://www.kombo.co/">Kombo</a>, a startup in the transportation
+          industry; develop a chat system for <a href="https://linehayat.usm.my/">LineHayat</a>, a student-run
+          organization; and turn other projects into digital reality. Most recently I've been developing
+          <a href="https://anemo-six.vercel.app/">Anemo</a>, an AI-powered web app to practice languages.
         </p>
         <p>
-          I focus mostly on full stack web development with Node.js, React and Next.js using TypeScript. I also have
-          experience with Python, Svelte, Rust and C++.
+          I focus mostly on back end development with Node.js, though I also have experience with Python, Rust, C++ and
+          front end experience with React and Svelte.
         </p>
+        <p>Some of my interests include languages, music and photography.</p>
       </section>
 
       <section id="my-work">
-        <h1>What have I done?</h1>
+        <h1>My work</h1>
 
         <div>
-          <h2>Professionally</h2>
-          <div class="timeline">
-            <div class="labels">
-              <span>December 2021</span>
-              <span>January 2024</span>
+          <div class="tabs">
+            <a href="#kombo">Kombo</a>
+            <a href="#bxyz">BXYZ</a>
+          </div>
+
+          <div class="jobs">
+            <div class="job" id="bxyz">
+              <div class="job-description">
+                <p>Software developer at <a href="https://bxyz.ai/">BXYZ</a></p>
+                <ul>
+                  <li>
+                    Architected and built an MVP using Next.js, Electron and Supabase, securing a pre-seed investment
+                    round and taking the company to a seed investment stage
+                  </li>
+                  <li>
+                    Designed and implemented authentication using OpenID Connect and authorization using OAuth 2.0,
+                    Role-Based Access Control and Attribute-Based Access Control, ensuring secure user and organization
+                    management
+                  </li>
+                  <li>
+                    Maintained and further developed the platform past MVP stage, shipping new features such as a
+                    WhatsApp integration, supporting user signups from new markets
+                  </li>
+                </ul>
+              </div>
+
+              <div class="timeline">
+                <div class="line">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
+                    <circle
+                      cx="2.5"
+                      cy="2.5"
+                      fill="currentColor"
+                      fill-opacity="0"
+                      r="2"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 5" preserveAspectRatio="none">
+                    <line x1="0" y1="2.5" x2="1" y2="2.5" stroke="currentColor" stroke-width="1" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
+                    <circle
+                      cx="2.5"
+                      cy="2.5"
+                      fill="currentColor"
+                      fill-opacity="0"
+                      r="2"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </svg>
+                </div>
+                <div class="labels">
+                  <span>December 2024</span>
+                  <span>Present</span>
+                </div>
+              </div>
             </div>
-            <div class="line">
-              <img src="img/circle.svg" alt="December 2021" />
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 5" preserveAspectRatio="none">
-                <line x1="0" y1="2.5" x2="1" y2="2.5" stroke="#ffffff" stroke-width="1" />
-              </svg>
-              <img src="img/circle.svg" alt="Present" />
+
+            <div class="job" id="kombo">
+              <div class="job-description">
+                <p>Full stack developer at <a href="https://www.kombo.co/">Kombo</a></p>
+                <ul>
+                  <li>
+                    Increased the conversion rate of a Kombo REST API by 73% by reducing its average response time from
+                    6.3 seconds to 1.5 seconds
+                  </li>
+                  <li>
+                    Improved the reliability of automatic after-sales actions, reducing the need for intervention by
+                    customer success representatives in 41% of cases
+                  </li>
+                  <li>
+                    Increased revenue by 12% in the Italian market by integrating the services of high speed train
+                    providers using their API
+                  </li>
+                </ul>
+              </div>
+
+              <div class="timeline">
+                <div class="line">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
+                    <circle
+                      cx="2.5"
+                      cy="2.5"
+                      fill="currentColor"
+                      fill-opacity="0"
+                      r="2"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 5" preserveAspectRatio="none">
+                    <line x1="0" y1="2.5" x2="1" y2="2.5" stroke="currentColor" stroke-width="1" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
+                    <circle
+                      cx="2.5"
+                      cy="2.5"
+                      fill="currentColor"
+                      fill-opacity="0"
+                      r="2"
+                      stroke="currentColor"
+                      stroke-width="1"
+                    />
+                  </svg>
+                </div>
+                <div class="labels">
+                  <span>December 2021</span>
+                  <span>January 2024</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="job-title">
-            <span>Full stack developer</span>
-            <a href="https://www.kombo.co/">
-              <img src="img/kombo.svg" alt="Kombo" />
-            </a>
-          </div>
-          <ul>
-            <li>
-              Increased the conversion rate of a Kombo API by 73% by reducing its average response time from 6.3 seconds
-              to 1.5 seconds
-            </li>
-            <li>
-              Improved the reliability of automatic after-sales actions, reducing the need for intervention by customer
-              success representatives in 41% of cases
-            </li>
-            <li>
-              Increased revenue by 12% in the Italian market by integrating the services of high speed train providers
-              using their API
-            </li>
-          </ul>
         </div>
 
         <div>
           <h2>Other projects</h2>
           <div class="pagination">
-            <a href="#eventually">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
-                <circle cx="2.5" cy="2.5" fill="#ffffff" fill-opacity="0" r="2" stroke="#ffffff" stroke-width="1" />
-              </svg>
-            </a>
-            <a href="#sopars-de-duro">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
-                <circle cx="2.5" cy="2.5" fill="#ffffff" fill-opacity="0" r="2" stroke="#ffffff" stroke-width="1" />
-              </svg>
-            </a>
-            <a href="#price-tracker">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
-                <circle cx="2.5" cy="2.5" fill="#ffffff" fill-opacity="0" r="2" stroke="#ffffff" stroke-width="1" />
-              </svg>
-            </a>
-            <a href="#infection-simulator">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
-                <circle cx="2.5" cy="2.5" fill="#ffffff" fill-opacity="0" r="2" stroke="#ffffff" stroke-width="1" />
-              </svg>
-            </a>
-            <a href="#fipsy-fpga-programmer">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 5">
-                <circle cx="2.5" cy="2.5" fill="#ffffff" fill-opacity="0" r="2" stroke="#ffffff" stroke-width="1" />
-              </svg>
-            </a>
+            <a href="#anemo"></a>
+            <a href="#eventually"></a>
+            <a href="#sopars-de-duro"></a>
+            <a href="#price-tracker"></a>
+            <a href="#infection-simulator"></a>
+            <a href="#fipsy-fpga-programmer"></a>
           </div>
 
           <div class="projects">
+            <div class="project" id="anemo">
+              <div class="project-header">
+                <img src="img/anemo.png" alt="Anemo" />
+                <h3>Anemo</h3>
+              </div>
+              <div class="project-description">
+                <p>A web app to practice languages.</p>
+              </div>
+              <div class="button-group">
+                <a class="button primary" href="https://anemo-six.vercel.app/">Live site</a>
+              </div>
+            </div>
+
             <div class="project" id="eventually">
               <div class="project-header">
                 <img src="img/eventually.webp" alt="Eventually" />
-                <h3>eventual.li</h3>
+                <h3>Eventually</h3>
               </div>
               <div class="project-description">
                 <p>A web app to find events.</p>
                 <p>See what's happening in your area; your future friends are waiting.</p>
               </div>
               <div class="button-group">
-                <a class="button primary" href="https://eventual.li">live site</a>
+                <a class="button primary" href="https://eventually-alex-araiza.vercel.app/">Live site</a>
               </div>
             </div>
 
@@ -152,8 +230,8 @@
                 <p>Filter recipes by category and tags and get new ideas for your next meal.</p>
               </div>
               <div class="button-group">
-                <a class="button secondary" href="https://github.com/alexaraiza/sopars-de-duro">source code</a>
-                <a class="button primary" href="https://soparsdeduro.com">live site</a>
+                <a class="button secondary" href="https://github.com/alexaraiza/sopars-de-duro">Source code</a>
+                <a class="button primary" href="https://soparsdeduro.com">Live site</a>
               </div>
             </div>
 
@@ -168,8 +246,8 @@
                 <p>This project is no longer maintained.</p>
               </div>
               <div class="button-group">
-                <a class="button secondary" href="https://github.com/alexaraiza/price-tracker">source code</a>
-                <a class="button primary" href="https://price-trackr.onrender.com/">live site</a>
+                <a class="button secondary" href="https://github.com/alexaraiza/price-tracker">Source code</a>
+                <a class="button primary" href="https://price-trackr.onrender.com/">Live site</a>
               </div>
             </div>
 
@@ -186,8 +264,8 @@
                 </p>
               </div>
               <div class="button-group">
-                <a class="button secondary" href="https://github.com/alexaraiza/infection-simulator">source code</a>
-                <a class="button primary" href="https://alexaraiza.github.io/infection-simulator/">live site</a>
+                <a class="button secondary" href="https://github.com/alexaraiza/infection-simulator">Source code</a>
+                <a class="button primary" href="https://alexaraiza.github.io/infection-simulator/">Live site</a>
               </div>
             </div>
 
@@ -200,10 +278,10 @@
                 <p>A browser-based tool to program an FPGA via Wi-Fi.</p>
               </div>
               <div class="button-group">
-                <a class="button secondary" href="https://github.com/alexaraiza/fipsy-fpga-programmer">source code</a>
-                <a class="button secondary" href="https://upcommons.upc.edu/handle/2117/334201">thesis</a>
+                <a class="button secondary" href="https://github.com/alexaraiza/fipsy-fpga-programmer">Source code</a>
+                <a class="button secondary" href="https://upcommons.upc.edu/handle/2117/334201">Thesis</a>
                 <a class="button primary" href="https://drive.google.com/file/d/18pnA9VaaefFUToI4FuoPUdOy90CklE5c/view"
-                  >video demo</a
+                  >Video demo</a
                 >
               </div>
             </div>
@@ -226,7 +304,7 @@
           <input name="email" required type="email" />
           <label for="message">Message</label>
           <textarea name="message" required></textarea>
-          <button class="primary" id="contactFormSubmitButton" type="submit">send</button>
+          <button class="primary" id="contactFormSubmitButton" type="submit">Send</button>
 
           <div id="formFeedback"></div>
         </form>
@@ -235,40 +313,40 @@
 
         <div class="copyable-text-group">
           <div class="copyable-text">
-            <a href="mailto:alexandre.araiza@gmail.com" class="contact-link" id="email">alexandre.araiza@gmail.com</a>
             <button class="copy-button primary" id="copyEmailButton">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 1H2v16h2V3h12V1zm5 4H6v18h15V5zm-2 16H8V7h11v14z" />
               </svg>
             </button>
+            <a href="mailto:alexandre.araiza@gmail.com" class="contact-link" id="email">alexandre.araiza@gmail.com</a>
           </div>
 
           <div class="copyable-text">
-            <a href="https://www.linkedin.com/in/alexaraiza/" class="contact-link" id="linkedinURL"
-              >linkedin.com/in/alexaraiza</a
-            >
             <button class="copy-button primary" id="copyLinkedinURLButton">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 1H2v16h2V3h12V1zm5 4H6v18h15V5zm-2 16H8V7h11v14z" />
               </svg>
             </button>
+            <a href="https://www.linkedin.com/in/alexaraiza/" class="contact-link" id="linkedinURL"
+              >linkedin.com/in/alexaraiza</a
+            >
           </div>
         </div>
       </section>
 
       <footer>
         <a href="https://github.com/alexaraiza">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.439 43.439" fill="#1b1817" class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="logo-icon github">
             <path
-              d="M21.717 0c-11.992 0-21.717 9.724-21.717 21.72c0 9.594 6.223 17.736 14.853 20.609c1.087.199 1.483-.472 1.483-1.048c0-.516-.019-1.881-.03-3.693c-6.04 1.312-7.315-2.912-7.315-2.912c-.988-2.51-2.412-3.178-2.412-3.178c-1.972-1.346.149-1.32.149-1.32c2.18.154 3.327 2.239 3.327 2.239c1.937 3.319 5.084 2.36 6.321 1.804c.197-1.403.759-2.36 1.379-2.903c-4.823-.549-9.894-2.412-9.894-10.734c0-2.372.847-4.31 2.236-5.828c-.224-.55-.969-2.758.214-5.748c0 0 1.822-.584 5.972 2.225c1.732-.481 3.59-.721 5.437-.73c1.845.009 3.703.249 5.437.73c4.147-2.81 5.967-2.225 5.967-2.225c1.185 2.99.44 5.198.217 5.748c1.392 1.518 2.232 3.456 2.232 5.828c0 8.344-5.078 10.18-9.916 10.717c.779.67 1.474 1.996 1.474 4.023c0 2.902-.027 5.245-.027 5.957c0 .581.392 1.257 1.493 1.045c8.624-2.878 14.842-11.013 14.842-20.606c0-11.996-9.726-21.72-21.722-21.72"
+              d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"
             />
           </svg>
         </a>
 
         <a href="https://www.linkedin.com/in/alexaraiza/">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.790 64.790" fill="#0a66c2" class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="#0a66c2" class="logo-icon">
             <path
-              d="M55.204 55.204h-9.6V40.17c0-3.585-.064-8.2-4.993-8.2c-5 0-5.765 3.906-5.765 7.939v15.294h-9.6V24.287h9.216v4.225h.129a10.1 10.1 0 019.093-4.994c9.73 0 11.524 6.4 11.524 14.726ZM14.414 20.061a5.571 5.571 0 115.57-5.572a5.571 5.571 0 01-5.57 5.572m4.8 35.143h-9.61V24.287h9.61Zm40.776-55.2h-55.21a4.728 4.728 0 00-4.781 4.67v55.439a4.731 4.731 0 004.781 4.675h55.21a4.741 4.741 0 004.8-4.675V4.67a4.738 4.738 0 00-4.8-4.67"
+              d="M34 2.5v29a2.5 2.5 0 0 1-2.5 2.5h-29A2.5 2.5 0 0 1 0 31.5v-29A2.5 2.5 0 0 1 2.5 0h29A2.5 2.5 0 0 1 34 2.5M10 13H5v16h5zm.45-5.5a2.88 2.88 0 0 0-2.86-2.9H7.5a2.9 2.9 0 0 0 0 5.8 2.88 2.88 0 0 0 2.95-2.81zM29 19.28c0-4.81-3.06-6.68-6.1-6.68a5.7 5.7 0 0 0-5.06 2.58h-.14V13H13v16h5v-8.51a3.32 3.32 0 0 1 3-3.58h.19c1.59 0 2.77 1 2.77 3.52V29h5z"
             />
           </svg>
         </a>

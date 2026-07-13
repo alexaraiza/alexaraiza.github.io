@@ -6,7 +6,27 @@ const contactForm = document.getElementById('contactForm');
 const contactFormSubmitButton = document.getElementById('contactFormSubmitButton');
 contactForm.addEventListener('submit', submitContactForm);
 
-const intersectionObserver = new IntersectionObserver(
+const jobIntersectionObserver = new IntersectionObserver(
+  (entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        document.querySelector(`a[href="#${entry.target.id}"]`).classList.add('active');
+      } else {
+        document.querySelector(`a[href="#${entry.target.id}"]`).classList.remove('active');
+      }
+    }
+  },
+  {
+    root: document.querySelector('.jobs'),
+    threshold: 0.5,
+  },
+);
+
+for (const job of document.querySelectorAll('.job')) {
+  jobIntersectionObserver.observe(job);
+}
+
+const projectIntersectionObserver = new IntersectionObserver(
   (entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -19,14 +39,14 @@ const intersectionObserver = new IntersectionObserver(
   {
     root: document.querySelector('.projects'),
     threshold: 0.5,
-  }
+  },
 );
 
 for (const project of document.querySelectorAll('.project')) {
-  intersectionObserver.observe(project);
+  projectIntersectionObserver.observe(project);
 }
 
-for (const paginationLink of document.querySelectorAll('.pagination > a')) {
+for (const paginationLink of document.querySelectorAll('.pagination > a, .tabs > a')) {
   paginationLink.addEventListener('click', (event) => {
     event.preventDefault();
     document.querySelector(paginationLink.getAttribute('href')).scrollIntoView({ block: 'nearest' });
